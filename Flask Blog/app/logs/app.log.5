@@ -1,0 +1,104 @@
+2025-01-01 18:49:01,323 - ERROR - An error occurred in admin_users route: 'flask_login.mixins.AnonymousUserMixin object' has no attribute 'has_admin_privileges'
+Traceback (most recent call last):
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\routes.py", line 299, in post
+    return render_template('post.html', title = post.title, post = post,image = image_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\post.html", line 1, in top-level template code
+    {%extends "layout.html"%}
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\layout.html", line 103, in top-level template code
+    {% block content %}
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\post.html", line 10, in block 'content'
+    {%if post.author == current_user or current_user.has_admin_privileges() %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'flask_login.mixins.AnonymousUserMixin object' has no attribute 'has_admin_privileges'
+2025-01-01 18:49:03,779 - ERROR - An error occurred in admin_users route: 'flask_login.mixins.AnonymousUserMixin object' has no attribute 'has_admin_privileges'
+Traceback (most recent call last):
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\routes.py", line 299, in post
+    return render_template('post.html', title = post.title, post = post,image = image_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\post.html", line 1, in top-level template code
+    {%extends "layout.html"%}
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\layout.html", line 103, in top-level template code
+    {% block content %}
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\post.html", line 10, in block 'content'
+    {%if post.author == current_user or current_user.has_admin_privileges() %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'flask_login.mixins.AnonymousUserMixin object' has no attribute 'has_admin_privileges'
+2025-01-01 18:51:56,318 - ERROR - An error occurred in admin_users route: 'flask_login.mixins.AnonymousUserMixin object' has no attribute 'has_admin_privileges'
+Traceback (most recent call last):
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\routes.py", line 299, in post
+    return render_template('post.html', title = post.title, post = post,image = image_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\post.html", line 1, in top-level template code
+    {%extends "layout.html"%}
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\layout.html", line 103, in top-level template code
+    {% block content %}
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\post.html", line 10, in block 'content'
+    {%if post.author == current_user or current_user.has_admin_privileges() %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'flask_login.mixins.AnonymousUserMixin object' has no attribute 'has_admin_privileges'
+2025-01-01 18:52:05,933 - ERROR - An error occurred in admin_users route: 'flask_login.mixins.AnonymousUserMixin object' has no attribute 'has_admin_privileges'
+Traceback (most recent call last):
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\routes.py", line 299, in post
+    return render_template('post.html', title = post.title, post = post,image = image_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\post.html", line 1, in top-level template code
+    {%extends "layout.html"%}
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\layout.html", line 103, in top-level template code
+    {% block content %}
+  File "d:\old laptop\2024\FURTHER UPGRADE\cs50_final_project\app\templates\post.html", line 10, in block 'content'
+    {%if post.author == current_user or current_user.has_admin_privileges() %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noors\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'flask_login.mixins.AnonymousUserMixin object' has no attribute 'has_admin_privileges'

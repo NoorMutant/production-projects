@@ -1,0 +1,39 @@
+<!-- admin_users.html -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h2 class="mb-4">Admin Panel - Users</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+          <tr>
+            <th scope="row">{{ user.id }}</th>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+              {% if not user.has_admin_privileges() %}
+                <!-- Add any admin actions here, e.g., delete user -->
+                <form method="post" action="/admin/delete_user/{{ user.id }}">
+                  <input class="btn btn-danger" type="submit" value="Delete">
+                </form>
+              {% else %}
+                <!-- Display a message or action for admin users -->
+                <span class="text-muted">Admin User</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

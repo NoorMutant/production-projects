@@ -1,0 +1,41 @@
+<!-- admin_posts.html -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h2 class="mb-4">Admin Panel - Posts</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Date Posted</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in posts %}
+          <tr>
+            <th scope="row">{{ post.id }}</th>
+            <td>{{ post.title }}</td>
+            <td>{{ post.author.username }}</td>
+            <td>{{ post.date_posted.strftime('%Y-%m-%d %H:%M:%S') }}</td> <!-- Format the date as per your requirement -->
+            <td>
+              {% if not post.author.has_admin_privileges() %}
+                <!-- Add any admin actions here, e.g., delete post -->
+                <form method="post" action="/admin/delete_post/{{ post.id }}">
+                  <input class="btn btn-danger" type="submit" value="Delete">
+                </form>
+              {% else %}
+                <!-- Display a message or action for admin users -->
+                <span class="text-muted">Admin User's Post</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
